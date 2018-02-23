@@ -30,7 +30,7 @@ class Header extends Component{
 }
 
 function mapStateToProps(state){
-    return {authenicated: state.authenticated}
+    return {authenticated: state.authenticated}
 }
 
 export default connect(mapStateToProps, actions)(Header);
