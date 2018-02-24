@@ -4,11 +4,12 @@ const http = require('http');
 const request = require('request');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
+const cors = require('cors');
 
 //app setup
 
 
-//set up body parser
+app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
