@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { browserHistory } from 'react-router';
-import { AUTH_USER, UNAUTH_USER, AUTH_ERROR } from './types';
+import { AUTH_USER, UNAUTH_USER, AUTH_ERROR, FETCH_MESSAGE } from './types';
+import * as actions from '../actions'
 
 const ROOT_URL = 'http://localhost:3000/api'
 
@@ -60,9 +61,12 @@ export function signoutUser(){
 
 export function fetchMessage() {
     return function (dispatch){
-        axios.get(ROOT_URL)
-        .then(response => {
-            console.log(response)
+       const request = axios.get(ROOT_URL, {
+            headers: { authorization: localStorage.getItem('token') }
         })
+        return {
+                type: FETCH_MESSAGE,
+                payload: request
+        }
     }
 }

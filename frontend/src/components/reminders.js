@@ -10,10 +10,13 @@ class Reminders extends Component {
 
     render() {
         return (
-            <div>This is reminder page</div>
+            <div>{this.props.message}</div>
         )
     }
 }
 
+function mapStateToProps(state){
+    return {message: state.auth.message }
+}
 
-export default connect (null, actions)(Reminders)
+export default connect (mapStateToProps, actions)(Reminders)
