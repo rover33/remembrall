@@ -22,6 +22,7 @@ app.use(express.static('public'))
 //setting up routes
 let router = require('./routes/routes')
 app.use('/api', router)
+    
 
 
 

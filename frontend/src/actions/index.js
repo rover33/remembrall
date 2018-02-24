@@ -1,10 +1,10 @@
-import {
-    CHANGE_AUTH
-} from './types'
+import axios from 'axios';
 
-export function authenticate(isLoggedIn){
-    return {
-        type: CHANGE_AUTH,
-        payload: isLoggedIn
+const ROOT_URL = 'http://localhost:3000/api'
+
+export function signinUser({email, password}){
+    return (dispatch) =>{
+        axios.post(`${ROOT_URL}/signin`, {email, password})
+
     }
 }
