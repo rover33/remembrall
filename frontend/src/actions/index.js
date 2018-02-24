@@ -16,7 +16,7 @@ export function signinUser({email, password}){
                 localStorage.setItem('token', response.data.token)
 
                 //redired to route /reminder
-                browserHistory.push('/reminder')
+                browserHistory.push('/reminders')
             })
             .catch(() => {
             //if request is bad show an error
@@ -38,7 +38,7 @@ export function signupUser({email, password}){
                 localStorage.setItem('token', response.data.token)
 
                 //redired to route /reminder
-                browserHistory.push('/reminder')
+                browserHistory.push('/reminders')
             })
             .catch(serve => {
                 dispatch(authError(serve.response.data.error))
@@ -55,6 +55,14 @@ export function authError(error){
 
 export function signoutUser(){
     localStorage.removeItem('token')
-
     return { type: UNAUTH_USER }
+}
+
+export function fetchMessage() {
+    return function (dispatch){
+        axios.get(ROOT_URL)
+        .then(response => {
+            console.log(response)
+        })
+    }
 }

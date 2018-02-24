@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import * as actions from '../actions'
 
-class  extends Component {
-    state = {  }
+class Reminders extends Component {
+    componentWillMount(){
+        this.props.fetchMessage()
+    }
+
+
     render() {
         return (
-            
-        );
+            <div>This is reminder page</div>
+        )
     }
 }
 
-export default ;
+
+export default connect (null, actions)(Reminders)
