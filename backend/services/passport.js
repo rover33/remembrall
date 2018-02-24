@@ -33,7 +33,7 @@ const jwtOptions = {
 
 //tell passport to use this
 const jwtLogin = new JwtStrategy(jwtOptions, function(payload, done){
-    User.findbyId(payload.sub, function(err, user){
+    User.findById(payload.sub, function(err, user){
         if (err) { return done(err, false)}
 
         if(user) {
