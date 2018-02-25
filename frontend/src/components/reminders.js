@@ -16,7 +16,7 @@ class Reminders extends Component {
 }
 
 function mapStateToProps(state){
-    return {message: state.auth.message }
+    return {message: state.msg.message }
 }
 
 export default connect (mapStateToProps, actions)(Reminders)
