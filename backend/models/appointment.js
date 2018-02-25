@@ -33,7 +33,7 @@ AppointmentSchema.statics.sendNotifcations = (callback) => {
         })
         //send messages to people
     sendNotifcations = (appointments) => {
-        const client = new Twilio(process.env.ACCOUNT_SID, process.env.AUTH_TOKEN)
+        const client = new Twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN)
         appointments.forEach(function(appointment){
             const options = {
                 to: ` + ${appointment.phoneNumber}`,
