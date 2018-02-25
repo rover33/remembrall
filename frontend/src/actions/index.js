@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { browserHistory } from 'react-router';
 import { AUTH_USER, UNAUTH_USER, AUTH_ERROR, FETCH_MESSAGE } from './types';
-import * as actions from '../actions'
 
 const ROOT_URL = 'http://localhost:3000/api'
 
