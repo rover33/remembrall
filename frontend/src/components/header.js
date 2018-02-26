@@ -6,7 +6,8 @@ class Header extends Component{
     renderLinks(){
         if (this.props.authenticated){
            return <li className="nav-item">
-                <Link className='nav-link' to='/signout'>Sign Out</Link>
+                <Link className='nav-link' to='/signout' key={3}>Sign Out</Link>
+                <Link to='/reminders' className='nav-link'key={4}>Reminders</Link>
             </li>
         } else {
            return [

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { reduxForm, Field, Form } from 'redux-form';
+import { reduxForm } from 'redux-form';
 import axios from 'axios'
 import { connect } from 'react-redux'
 import * as actions from '../actions'
@@ -7,7 +7,7 @@ import * as actions from '../actions'
 const ROOT_URL = 'http://localhost:3000/api'
 
 
-export default class Reminders extends Component {
+class Reminders extends Component {
    constructor(props){
        super(props)
        this.state = {
@@ -18,7 +18,8 @@ export default class Reminders extends Component {
 
 
 
- smsSend = () =>{
+ smsSend = (event) =>{
+    //  event.preventDefault()
      console.log('smsSend')
      axios({
          method: "post",
@@ -29,7 +30,8 @@ export default class Reminders extends Component {
          }
      })
      .then(response => {
-         console.log(response)
+         console.log('skajhdkah')
+         this.setState({body: '', to: ''})
      }) 
  }
 
@@ -48,13 +50,19 @@ export default class Reminders extends Component {
 
     render() {
         return (
+       
            <div className='col-md-4 align-items-center'>
                <h1>Hello World</h1>
-               <input className='messageBox' type='text' placeholder='message' value={this.state.body} onChange={event=>this.handleChange(event)}/>
-               <input className='phoneNumber' placeholder='+123456789' value={this.state.to} onChange={event=>this.numberChange(event)}/>
-               <button className='col-md-6' onClick={this.smsSend} >Send Message</button>
+               <form onSubmit={event=>this.smsSend(event)}>
+                    <input className='messageBox' type='text' placeholder='message' value={this.state.body} onChange={event=>this.handleChange(event)}/>
+                    <input className='phoneNumber' placeholder='+123456789' value={this.state.to} onChange={event=>this.numberChange(event)}/>
+                    <button className='col-md-6' >Send Message</button>
+               </form>
            </div>
         )
     }
 }
 
+export default reduxForm({
+    form: 'reminders'
+  })(Reminders);

@@ -10,7 +10,7 @@ exports.sendingMessage = (req,res) => {
 })
     .then((message) => {
         console.log(message.sid)
-        res.json(message)
+        res.send(message)
         }
     )
 }
