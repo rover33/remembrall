@@ -2,6 +2,7 @@ const router = require('express').Router(),
       request = require('request'),
       axios = require('axios');
       auth = require('../controllers/auth');
+      smsController = require('../controllers/sms');
       passportService = require('../services/passport');
       passport = require('passport')
       Appointment = require('../models/appointment')
@@ -31,22 +32,24 @@ router.post('/signin', requireSignin, auth.signin);
 router.post('/signup', auth.signup);
 
 
+router.post('/sms', smsController.sendingMessage)
+
 //get appointments
 
-const getTimeZones = () => {
-      return momentTimeZone.tz.names()
-}
+// const getTimeZones = () => {
+//       return momentTimeZone.tz.names()
+// }
 
-router.get('/create', (req, res, next) =>{
-      res.render('appointments/create', {
-            timeZones: getTimeZones(),
-            Appointment: new Appointment({name: '',
-                                          phoneNumber: '',
-                                          notification: '',
-                                          time: ''
-             })
-      })
-})
+// router.get('/create', (req, res, next) =>{
+//       res.render('appointments/create', {
+//             timeZones: getTimeZones(),
+//             Appointment: new Appointment({name: '',
+//                                           phoneNumber: '',
+//                                           notification: '',
+//                                           time: ''
+//              })
+//       })
+// })
 
 
 

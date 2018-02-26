@@ -5,6 +5,7 @@ import { AUTH_USER, UNAUTH_USER, AUTH_ERROR, FETCH_MESSAGE } from './types';
 const ROOT_URL = 'http://localhost:3000/api'
 
 
+
 //auth
 export function signinUser({email, password}){
     return (dispatch) =>{
