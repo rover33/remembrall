@@ -26,6 +26,15 @@
   height: 5rem;
 }
 
+
+.react-datepicker{
+  background-color: red;
+  border: 1px solid black;
+  position: relative;
+  z-index: 1;
+  overflow-y: scroll;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
