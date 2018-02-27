@@ -59,7 +59,7 @@ export default class Reminders extends Component {
                     <input className='messageBox' placeholder='message' value={this.state.body} onChange={event=>this.handleChange(event)}/>
                     <input className='phoneNumber' placeholder='+123456789' value={this.state.to} onChange={event=>this.numberChange(event)}/>
                     <Date className='dateTime' />
-                    <button className='sendButton' >Send Message</button>
+                    <button className='btn btn-primary sendButton' >Send Message</button>
                </form>
            </div>
         )
