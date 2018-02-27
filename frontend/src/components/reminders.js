@@ -2,8 +2,14 @@ import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
 import axios from 'axios'
 import Date from './dates/date'
-const ROOT_URL = process.env.NODE_ENV=== '/api' ? 'http://localhost:3000/api' : '';
-// const ROOT_URL = 'http://localhost:3000/api'
+if(!process.env.DYNO) {
+    console.log("root url is local " + ROOT_URL)
+    var ROOT_URL = 'http://localhost:3000/api'
+  }else{
+    console.log("root url is prod" + ROOT_URL)
+
+    var ROOT_URL = '/api'
+  }
 
 
 export default class Reminders extends Component {
