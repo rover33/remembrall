@@ -44,7 +44,7 @@ class Signin extends Component {
                     <Field name="email" type="email" component={renderInput} label='Email'/>
                 </div>
                 <div className="form-group password">
-                    <Field name="password" type="password" component={renderInput} label='Password' />
+                    <Field  name="password" type="password" component={renderInput} label='Password' />
                 </div>
                 {this.renderAlert()}
                 <button action="submit" className="btn btn-primary signB">Sign in</button>

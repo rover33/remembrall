@@ -8,12 +8,12 @@ const cron = require('node-cron')
 
 
 exports.sendingMessage = (req,res) => {
-    cron.schedule('1 11 22 26 2 0', (startDate) =>{
+    // cron.schedule('1 11 22 26 2 0', (startDate) =>{
     client.messages.create({
     from: process.env.TWILIO_PHONE_NUMBER,
     to: req.body.to,
     body: req.body.body,
-    })
+    // })
 })
     .then((message) => {
         console.log(message.sid)
