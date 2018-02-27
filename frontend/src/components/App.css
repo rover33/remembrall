@@ -53,6 +53,17 @@ justify-content: center;
 
 }
 
+.error{
+  color:red;
+}
+
+.bye{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-size: 5rem;
+}
 
 .messageForm{
   display: flex;
