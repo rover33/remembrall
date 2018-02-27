@@ -70,6 +70,7 @@ justify-content: center;
   display: flex;
   justify-content: center;
   margin-left: 3rem;
+  width: 4rem;
 }
 
 .sendButton{
@@ -86,7 +87,12 @@ justify-content: center;
 .react-datepicker__input-container{
   display: flex;
   align-items: center;
-  margin-left: 1.5rem;
+  margin-left: 1rem;
+}
+
+.react-datepicker{
+  width: 10.75rem;
+  text-align: center;
 }
 
 @keyframes App-logo-spin {
