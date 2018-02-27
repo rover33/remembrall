@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
 import axios from 'axios'
 import Date from './dates/date'
-const ROOT_URL = process.env.NODE_ENV==='development' ? 'http://localhost:3000/api' : '';
+const ROOT_URL = process.env.NODE_ENV==='/api' ? 'http://localhost:3000/api' : '';
 
 
 export default class Reminders extends Component {
