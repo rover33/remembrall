@@ -11,7 +11,6 @@ export default class Reminders extends Component {
        this.state = {
            to: '',
            body: '',
-           date: ''
        }
    }
 
@@ -19,17 +18,17 @@ export default class Reminders extends Component {
 
  smsSend = (event) =>{
     //  event.preventDefault()
-     console.log('smsSend')
      axios({
          method: "post",
          url: `${ROOT_URL}/sms`,
          data:{
             to: this.state.to,
             body: this.state.body
+            
          }
      })
      .then(response => {
-         console.log('skajhdkah')
+         console.log('hello world')
          this.setState({body: '', to: ''})
      }) 
  }
@@ -59,7 +58,7 @@ export default class Reminders extends Component {
                     <input className='messageBox' placeholder='message' value={this.state.body} onChange={event=>this.handleChange(event)}/>
                     <input className='phoneNumber' placeholder='+123456789' value={this.state.to} onChange={event=>this.numberChange(event)}/>
                     <Date className='dateTime' />
-                    <button className='btn btn-primary sendButton' >Send Message</button>
+                    <button className='btn btn-primary sendButton'>Send Message</button>
                </form>
            </div>
         )

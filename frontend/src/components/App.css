@@ -58,12 +58,16 @@ justify-content: center;
   justify-content: center;
   margin: 1rem;
   height: 5rem;
+  border-radius: .2rem;
+  border: 1px solid black;
 }
 
 .phoneNumber{
   display: flex;
   justify-content: center;
   margin: 1rem;
+  border-radius: .2rem;
+  border: 1px solid black;
 }
 
 .dateTime{
@@ -71,6 +75,7 @@ justify-content: center;
   justify-content: center;
   margin-left: 3rem;
   width: 4rem;
+
 }
 
 .sendButton{
@@ -87,13 +92,13 @@ justify-content: center;
 .react-datepicker__input-container{
   display: flex;
   align-items: center;
-  margin-left: 1rem;
+  margin-left: 1.75rem;
 }
 
-.react-datepicker{
+/* .react-datepicker{
   width: 10.75rem;
   text-align: center;
-}
+} */
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
