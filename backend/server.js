@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const path=require('path')
 const http = require('http');
 const request = require('request');
 const bodyParser = require('body-parser');
@@ -18,7 +19,8 @@ app.use(bodyParser.json())
 let db = require('./models')
 
 //server static files in public
-app.use(express.static('public'))
+// app.use(express.static('public'))
+app.use(express.static(path.join('public', 'build')))
 
 //setting up routes
 let router = require('./routes/routes')

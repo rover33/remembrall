@@ -4,7 +4,6 @@ import axios from 'axios'
 import DatePicker from 'react-datepicker'
 import moment from 'moment';
 import "react-datepicker/dist/react-datepicker.css"
-const ROOT_URL = 'http://localhost:3000/api'
 
 export default class Date extends Component{
     constructor(props) {
@@ -14,21 +13,6 @@ export default class Date extends Component{
         };
         this.handleChange = this.handleChange.bind(this);
     }
-
-   smsDate = (event) =>{
-        //  event.preventDefault()
-         axios({
-             method: "post",
-             url: `${ROOT_URL}/sms`,
-             data:{
-                startDate: this.state.startDate
-             }
-         })
-         .then(response => {
-             console.log('hello world')
-             this.setState({startDate: ''})
-         }) 
-     }
 
     handleChange(date) {
         this.setState({
