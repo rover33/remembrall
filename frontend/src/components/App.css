@@ -34,6 +34,11 @@ h2{
   color:white !important;
 }
 
+.nav {
+  float: right !important;
+  padding-left: 1rem;
+}
+
 .form-group{
 display: flex;
 justify-content: center;
