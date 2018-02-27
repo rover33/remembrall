@@ -4,11 +4,13 @@ import { connect } from 'react-redux';
 import { reduxForm, Field, Form } from 'redux-form';
 import * as actions from '../../actions';
 
-const renderInput = field => {
-    const { input, type } = field;
+const renderInput = (field) => {
+    const { label, type, input, meta: { error, touched } } = field;
     return (
         <div>
-            <input {...input} type={type} className="form-control" />
+            <label>{label}:</label>
+            <input {...input} type={type}className="form-control" />
+                {touched && error && <div className="error">{error}</div>}
         </div>
     );
 }
@@ -36,18 +38,16 @@ class Signin extends Component {
         const { handleSubmit } = this.props;
 
         return (
-            <Form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+            <Form className='logIn' onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
                 
-                <div className="form-group">
-                    <label>Email:</label>
-                    <Field name="email" type="email" component={renderInput} />
+                <div className="form-group email">
+                    <Field name="email" type="email" component={renderInput} label='Email'/>
                 </div>
-                <div className="form-group">
-                    <label>Password:</label>
-                    <Field name="password" type="password" component={renderInput} />
+                <div className="form-group password">
+                    <Field name="password" type="password" component={renderInput} label='Password' />
                 </div>
                 {this.renderAlert()}
-                <button action="submit" className="btn btn-primary">Sign in</button>
+                <button action="submit" className="btn btn-primary signB">Sign in</button>
             </Form>
         );
     }

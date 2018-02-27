@@ -1,26 +1,45 @@
-/* .App {
+.container{
+  margin-top: 5rem;
+}
+
+.headerP{
+  display: flex;
+  justify-content: center;
+}
+
+.para{
+  display: flex;
+  justify-content: center;
+  margin: 3rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  flex-wrap: wrap;
+}
+
+h2{
   text-align: center;
+  color: red;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.form-group{
+display: flex;
+justify-content: center;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.logIn{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin:5rem;
 }
 
-.App-title {
-  font-size: 1.5em;
+
+.btn{
+  display: flex;
+  margin: auto;
+
 }
 
-.App-intro {
-  font-size: large;
-} */
 
 .messageForm{
   display: flex;
