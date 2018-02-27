@@ -7,17 +7,17 @@ class Header extends Component{
         if (this.props.authenticated){
            return [
                 <li className="nav-item">
-                     <Link to='/reminders' className='nav-link'key={2}>Reminders</Link>
+                     <Link to='/reminders' className='nav-link' key={1}>Reminders</Link>
                 </li>,
                 <li className="nav-item">
-                    <Link className='nav-link' to='/signout' key={1}>Sign Out</Link>
+                    <Link className='nav-link' to='/signout' key={2}>Sign Out</Link>
                  </li>]
         } else {
            return [
-           <li className="nav-item" key={1}>
+           <li className="nav-item" key={3}>
                 <Link className='nav-link' to='/signin'>Sign in</Link>
             </li>,
-            <li className='nav-item' key={2} >
+            <li className='nav-item' key={4} >
                 <Link className='nav-link' to='/signup'>Sign Up</Link>
             </li>
            ]

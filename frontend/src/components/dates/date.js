@@ -25,6 +25,11 @@ export default class Date extends Component{
         <DatePicker className='react-datepicker'
         selected={this.state.startDate}
         onChange={this.handleChange}
+        showTimeSelect
+        timeFormat='HH:mm'
+        timeIntervals={15}
+        dateFormat='LLL'
+        timeCaption='time'
         withPortal
        />
         )

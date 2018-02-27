@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -20,19 +20,54 @@
 
 .App-intro {
   font-size: large;
+} */
+
+.messageForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  width: 100vw;
+}
+
+.headerR{
+  text-align: center;
 }
 
 .messageBox{
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
   height: 5rem;
 }
 
+.phoneNumber{
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
 
-.react-datepicker{
-  background-color: red;
-  border: 1px solid black;
-  position: relative;
-  z-index: 1;
-  overflow-y: scroll;
+.dateTime{
+  display: flex;
+  justify-content: center;
+  margin-left: 3rem;
+}
+
+.sendButton{
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+  margin-left: 2.5rem;
+}
+
+.react-datepicker__time-list{
+  padding-left: 5px;
+}
+
+.react-datepicker__input-container{
+  display: flex;
+  align-items: center;
+  margin-left: 1.5rem;
 }
 
 @keyframes App-logo-spin {

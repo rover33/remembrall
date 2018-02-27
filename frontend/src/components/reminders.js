@@ -10,7 +10,8 @@ export default class Reminders extends Component {
        super(props)
        this.state = {
            to: '',
-           body: ''
+           body: '',
+           date: ''
        }
    }
 
@@ -52,13 +53,13 @@ export default class Reminders extends Component {
 
     render() {
         return (
-           <div className='col-md-4 align-items-center'>
-               <h1>Hello World</h1>
+           <div className='messageForm'>
+               <h1 className='headerR'>Send Messages</h1>
                <form onSubmit={event=>this.smsSend(event)}>
                     <input className='messageBox' placeholder='message' value={this.state.body} onChange={event=>this.handleChange(event)}/>
                     <input className='phoneNumber' placeholder='+123456789' value={this.state.to} onChange={event=>this.numberChange(event)}/>
-                    <Date className='col-md-4' />
-                    <button className='col-md-6' >Send Message</button>
+                    <Date className='dateTime' />
+                    <button className='sendButton' >Send Message</button>
                </form>
            </div>
         )
