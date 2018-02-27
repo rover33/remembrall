@@ -2,7 +2,7 @@ import axios from 'axios';
 import { browserHistory } from 'react-router';
 import { AUTH_USER, UNAUTH_USER, AUTH_ERROR, FETCH_MESSAGE } from './types';
 
-const ROOT_URL = process.env.NODE_ENV=== 'development' ? 'http://localhost:3000/api' : '';
+const ROOT_URL = process.env.NODE_ENV=== '/api' ? 'http://localhost:3000/api' : '';
 
 // const ROOT_URL = 'http://localhost:3000/api'
 
