@@ -11,11 +11,12 @@ if(!process.env.DYNO) {
   }
 
 console.log("root url is " + ROOT_URL)
-
+    
 
 
 //auth
 export function signinUser({email, password}){
+
     return (dispatch) =>{
         //submit email/pwd to server
         axios.post(`${ROOT_URL}/signin`, {email, password})
