@@ -25,6 +25,7 @@ const requireSignin = passport.authenticate('local', { session: false})
 
 
 
+
 router.get('/', requireAuth, function(req, res) {
         res.send({ message: 'Super secret code is ABC123' });
       });

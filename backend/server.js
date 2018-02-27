@@ -20,11 +20,15 @@ let db = require('./models')
 
 //server static files in public
 // app.use(express.static('public'))
-app.use(express.static(path.join('public', 'build')))
+app.use(express.static(path.join(__dirname, '/build')))
+app.get('/*', function(req, res) {
+    res.sendFile(path.join(__dirname + '/build/index.html'));
+  });
 
 //setting up routes
 let router = require('./routes/routes')
 app.use('/api', router)
+
     
 
 

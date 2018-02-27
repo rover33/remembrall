@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router'
+// import { BroswerRouter, Route, Switch } from 'react-router-dom'
 import reduxThunk from 'redux-thunk'
 
 
@@ -42,5 +43,22 @@ ReactDOM.render(
         </Router>
     </Provider>,
     document.querySelector('#root'));
+
+
+    // ReactDOM.render(
+    //     <Provider store={store}>
+    //         <BrowserRouter>
+    //             <Switch>
+    //                 <Route exact path="/" component={App}>
+    //                     <Route exact path='/' component={Landing} />
+    //                     <Route path="signin" component={Signin} />
+    //                     <Route path='signout' component={Signout} />
+    //                     <Route path='signup' component={Signup} />
+    //                     <Route path='reminders' component={RequireAuth(Reminders)} />
+    //                 </Route>
+    //             </Switch>
+    //         </BrowserRouter>
+    //     </Provider>,
+    //     document.querySelector('#root'));
 
 
