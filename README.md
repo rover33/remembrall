@@ -10,7 +10,7 @@ I am making a web application to set reminders and will text you those reminders
 
 [Heroku](https://remembrall1.herokuapp.com/).
 
-<img src="remembrall/REMY_wireframes.pdf">
+[!WireFrame](https://github.com/rover33/remembrall/blob/master/REMY_wireframes.pdf)
 
 ### Approach Taken
 
