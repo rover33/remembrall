@@ -2,23 +2,36 @@
   margin-top: 5rem;
 }
 
+label{
+  color:white !important;
+}
+
 .headerP{
   display: flex;
   justify-content: center;
+  color: white;
 }
 
 .para{
   display: flex;
   justify-content: center;
-  margin: 3rem;
-  padding-left: 10rem;
-  padding-right: 10rem;
+  width: 300px;
+  margin: 30px auto;
   flex-wrap: wrap;
+  color: white;
 }
 
 h2{
   text-align: center;
   color: red;
+}
+
+.navbar-light .navbar-brand {
+  color: white !important;
+}
+
+.nav-link{
+  color:white !important;
 }
 
 .form-group{
@@ -51,6 +64,7 @@ justify-content: center;
 
 .headerR{
   text-align: center;
+  color: white;
 }
 
 .messageBox{
@@ -99,6 +113,15 @@ justify-content: center;
   width: 10.75rem;
   text-align: center;
 } */
+
+.background-img {
+  background: url(/images/remembrall.jpg) no-repeat center center fixed; 
+  height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
