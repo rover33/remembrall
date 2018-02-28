@@ -2,12 +2,13 @@ import axios from 'axios';
 import { browserHistory } from 'react-router';
 import { AUTH_USER, UNAUTH_USER, AUTH_ERROR, FETCH_MESSAGE } from './types';
 
-if(!process.env.DYNO) {
-    console.log("root url is local" + ROOT_URL)
+if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+    console.log("root url is local " + ROOT_URL)
     var ROOT_URL = 'http://localhost:3000/api'
   }else{
+    
+    var ROOT_URL = '/api'
     console.log("root url is prod" + ROOT_URL)
-   var ROOT_URL = '/api'
   }
 
 console.log("root url is " + ROOT_URL)
