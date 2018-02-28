@@ -3,7 +3,7 @@ import { reduxForm } from 'redux-form';
 import axios from 'axios'
 import Date from './dates/date'
 
-let ROOT_URL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000/api' : ''
+let ROOT_URL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000/api' : '/api'
 // if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
 //     console.log("root url is local " + ROOT_URL)
 //     var ROOT_URL = 'http://localhost:3000/api'
