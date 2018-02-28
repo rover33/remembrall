@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
 import axios from 'axios'
 import Date from './dates/date'
-if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-    console.log("root url is local " + ROOT_URL)
-    var ROOT_URL = 'http://localhost:3000/api'
-  }else{
+
+let ROOT_URL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000/api' : ''
+// if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+//     console.log("root url is local " + ROOT_URL)
+//     var ROOT_URL = 'http://localhost:3000/api'
+//   }else{
     
-    var ROOT_URL = '/api'
-    console.log("root url is prod" + ROOT_URL)
-  }
+//     var ROOT_URL = '/api'
+//     console.log("root url is prod" + ROOT_URL)
+//   }
 
 
 export default class Reminders extends Component {
