@@ -6,9 +6,9 @@ if(!process.env.DYNO) {
     console.log("root url is local " + ROOT_URL)
     var ROOT_URL = 'http://localhost:3000/api'
   }else{
-    console.log("root url is prod" + ROOT_URL)
-
+    
     var ROOT_URL = '/api'
+    console.log("root url is prod" + ROOT_URL)
   }
 
 
